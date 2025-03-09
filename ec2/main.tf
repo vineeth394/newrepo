@@ -28,8 +28,8 @@ resource "aws_security_group" "webserver_access" {
 }
 
 resource "aws_instance" "ourfirst" {
-  ami                    = "ami-0cb91c7de36eed2cb"
-  availability_zone      = "us-east-2a"
+  ami                    = "ami-00bb6a80f01f03502"
+  availability_zone      = "ap-south-1b"
   instance_type          = "t2.micro"
   user_data              = filebase64("install_ansible.sh")
   vpc_security_group_ids = [aws_security_group.webserver_access.id]  # Correct reference
