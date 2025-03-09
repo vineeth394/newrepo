@@ -29,11 +29,11 @@ pipeline {
             steps {
                     script {
                         dir("terraform") {
-                            // Check if the "terra-cloud" directory exists
+                            // Check if the "newrepo" directory exists
                             sh '''
-                                if [ -d "terra-cloud" ]; then
+                                if [ -d "newrepo" ]; then
                                     echo "Directory exists. Deleting it..."
-                                    rm -rf terra-cloud
+                                    rm -rf newrepo
                                 fi
                                 echo "Cloning the repository..."
                                 git clone "https://github.com/vineeth394/newrepo.git"
